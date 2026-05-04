@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: dropfood-webhook
+    env: python
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn webhook:app"
+    plan: free
